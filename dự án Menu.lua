@@ -9,40 +9,39 @@ toggleButton.Size = UDim2.new(0, 50, 0, 50)
 toggleButton.Position = UDim2.new(0.05, 0, 0.1, 0)
 toggleButton.BackgroundTransparency = 1
 toggleButton.Image = "rbxassetid://96693216224872" -- Thay bằng ID hình ảnh của bạn
-toggleButton.CornerRadius = UDim.new(0, 10) -- Thêm cạnh tròn cho nút bấm
 
 -- Hiệu ứng động cho button
 local buttonTweening = false
 toggleButton.MouseEnter:Connect(function()
-if not buttonTweening then
-buttonTweening = true
-toggleButton:TweenSize(
-UDim2.new(0, 60, 0, 60), -- Phóng to khi hover
-Enum.EasingDirection.Out,
-Enum.EasingStyle.Quad,
-0.2,
-true,
-function()
-buttonTweening = false
-end
-)
-end
+    if not buttonTweening then
+        buttonTweening = true
+        toggleButton:TweenSize(
+            UDim2.new(0, 60, 0, 60), -- Phóng to khi hover
+            Enum.EasingDirection.Out,
+            Enum.EasingStyle.Quad,
+            0.2,
+            true,
+            function()
+                buttonTweening = false
+            end
+        )
+    end
 end)
 
 toggleButton.MouseLeave:Connect(function()
-if not buttonTweening then
-buttonTweening = true
-toggleButton:TweenSize(
-UDim2.new(0, 50, 0, 50), -- Thu nhỏ lại
-Enum.EasingDirection.Out,
-Enum.EasingStyle.Quad,
-0.2,
-true,
-function()
-buttonTweening = false
-end
-)
-end
+    if not buttonTweening then
+        buttonTweening = true
+        toggleButton:TweenSize(
+            UDim2.new(0, 50, 0, 50), -- Thu nhỏ lại
+            Enum.EasingDirection.Out,
+            Enum.EasingStyle.Quad,
+            0.2,
+            true,
+            function()
+                buttonTweening = false
+            end
+        )
+    end
 end)
 
 -- Khung chính của menu

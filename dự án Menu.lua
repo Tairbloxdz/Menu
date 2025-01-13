@@ -80,26 +80,6 @@ title.BorderSizePixel = 0
 local titleCorner = Instance.new("UICorner", title)
 titleCorner.CornerRadius = UDim.new(0, 15)
 
--- Danh sách nút bật/tắt
-local buttons = {
-    {name = "Farm 1", position = UDim2.new(0.1, 0, 0.25, 0)},
-    {name = "Farm 2", position = UDim2.new(0.1, 0, 0.45, 0)},
-    {name = "Farm 3", position = UDim2.new(0.1, 0, 0.65, 0)}
-}
-
--- Tạo nút bật/tắt
-local function createToggleButton(info)
-    -- Khung chính của nút
-    local buttonFrame = Instance.new("Frame", mainFrame)
-    buttonFrame.Name = info.name
-    buttonFrame.Size = UDim2.new(0.8, 0, 0.15, 0)
-    buttonFrame.Position = info.position
-    buttonFrame.BackgroundColor3 = Color3.fromRGB(50, 100, 180)
-    buttonFrame.BorderSizePixel = 0
-
-    -- Hiệu ứng góc bo cho khung chính
-    local buttonCorner = Instance.new("UICorner", buttonFrame)
-    buttonCorner.CornerRadius = UDim.new(0, 10)
 
     -- Nút nhỏ di chuyển trong toggle
     local toggle = Instance.new("Frame", buttonFrame)

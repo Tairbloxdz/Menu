@@ -5,7 +5,7 @@ screenGui.Name = "Taidepzai hub"
 
 -- Nút bật/tắt menu
 local toggleButton = Instance.new("ImageButton", screenGui)
-toggleButton.Size = UDim2.new(0, 50, 0, 50)
+toggleButton.Size = UDim2.new(0, 40, 0, 40)
 toggleButton.Position = UDim2.new(0.05, 0, 0.1, 0)
 toggleButton.BackgroundTransparency = 1
 toggleButton.Image = "rbxassetid://96693216224872" -- Thay bằng ID hình ảnh của bạn
@@ -16,7 +16,7 @@ toggleButton.MouseEnter:Connect(function()
     if not buttonTweening then
         buttonTweening = true
         toggleButton:TweenSize(
-            UDim2.new(0, 60, 0, 60), -- Phóng to khi hover
+            UDim2.new(0, 50, 0, 50), -- Phóng to khi hover
             Enum.EasingDirection.Out,
             Enum.EasingStyle.Quad,
             0.2,
@@ -32,7 +32,7 @@ toggleButton.MouseLeave:Connect(function()
     if not buttonTweening then
         buttonTweening = true
         toggleButton:TweenSize(
-            UDim2.new(0, 50, 0, 50), -- Thu nhỏ lại
+            UDim2.new(0, 40, 0, 40), -- Thu nhỏ lại
             Enum.EasingDirection.Out,
             Enum.EasingStyle.Quad,
             0.2,
